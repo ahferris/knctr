@@ -10,7 +10,7 @@ gem 'rails', '4.0.0'
 gem 'pg'
 
 # Heroku requires ruby specified. Make sure the ruby versions are consistent
-ruby ">=1.9.3"
+ruby "1.9.3"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
