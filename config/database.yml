@@ -26,4 +26,4 @@ production:
   host: localhost
   database: Blog_production
   pool: 5
-
+  
