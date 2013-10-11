@@ -7,6 +7,7 @@ gem 'rails', '4.0.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/ra
 group :development, :test do
 	gem 'sqlite3' # Use sqlite3 as the database for Active Record, Development Only
 	gem 'rspec-rails', '~> 2.0' #RSpec is a testing framework for Rails 3.x and 4.x
+	gem 'factory_girl_rails' #Fixtures replacement with a straightforward definition syntax
 end
 
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
