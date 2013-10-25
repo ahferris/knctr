@@ -58,22 +58,47 @@
 					<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
 					<div class="feed-body">
 						<div class="annotated-body">
-							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">has a question:</span>
+							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
 						</div>
-						<div class="question-content">What procedures/policies does Disney use to insure their research is commercialized?</div>
-						<div class="question-category">Question Category: </div>
+						<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+						<div class="question-category">Question Category: 
+						</div>
 					</div>
 				</div>
 				<div class="feed-item">
-					hello2
+					<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+					<div class="feed-body">
+						<div class="annotated-body">
+							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+						</div>
+						<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+						<div class="question-category">Question Category: 
+						</div>
+					</div>
 				</div>
 				<div class="feed-item">
-					hello3
+					<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+					<div class="feed-body">
+						<div class="annotated-body">
+							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+						</div>
+						<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+						<div class="question-category">Question Category: 
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div id="questionentry">
-				hello
+				<div id="question-header">Have a question? </div>
+				<div id="input-container">
+					<div class="input-group">
+						<input id="input-question" type="text" class="form-control" placeholder="Example: What procedures/policies does Disney use to ensure their research is commercialized?">
+						<textarea id="input-description" class="form-control" style="max-width:; max-rows:'4';" rows="4" placeholder="Context/description"></textarea> 
+						<input id="input-category" type="text" class="form-control" placeholder="Question categories">
+					</div>
+					<button id="question-submit" type="button" class="btn btn-primary btn-block">Submit</button>
+				</div>
 			</div>
 		</div>
 
@@ -81,7 +106,7 @@
 
 	</body>
 </html>
-
+	
 <style>
 
 body{
@@ -128,23 +153,68 @@ body{
 	
 }
 
+.annotated-body{
+
+}
+
+.question-intro{
+
+}
+
 .person-name{
 
 }
 
+.person-title{
+
+}
+
 .question-content{
+	padding-top: 5px;
 
 }
 
 .question-category{
-
+	padding-top: 5px;
 }
+
 
 #questionentry{
 	width: 318px;
 	float: right;
 	margin-left: 10px;
-	border: 1px black solid;
+	border: 1px #D4D4D4 solid;
+	background: #FFFFFF;
+	height: 400px;
+}
+
+#input-container{
+	margin:5px;
+}
+
+#question-header{
+	margin: 5px;
+	text-align: center;
+}
+
+/*.question-element-holder{
+	margin:5px;
+}*/
+
+#input-question{
+	margin-top:5px;
+}
+
+#input-description{
+	margin-top:5px;
+}
+
+#input-category{
+	margin-top:5px;
+}
+
+#question-submit{
+	margin-top: 5px;
 }
 
 </style>
