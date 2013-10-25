@@ -23,6 +23,13 @@ Blog::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  resource :login do
+    member do
+      get 'callback'
+      get 'logout'
+    end
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do
