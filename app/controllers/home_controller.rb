@@ -1,6 +1,5 @@
-class HomeController < ActionController::Base
-	# def index
+class HomeController < ApplicationController
+	def index
 
-	# end
-
+	end
 end

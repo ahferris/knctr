@@ -1,8 +1,13 @@
 Blog::Application.routes.draw do
   # get "welcome/index"
-  get "views/home"
+  # get "views/home"
 
-  root to: "home#home" 
+  # match '/home' => 'home#index' not working...
+  root :to => 'home#index'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
