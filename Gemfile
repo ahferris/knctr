@@ -3,6 +3,7 @@ ruby "1.9.3"
 # Heroku requires ruby specified. Make sure the ruby versions are consistent
 
 gem 'rails', '4.0.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'pg'
 
 group :development, :test do
 	gem 'sqlite3' # Use sqlite3 as the database for Active Record, Development Only
