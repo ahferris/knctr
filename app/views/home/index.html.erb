@@ -5,18 +5,19 @@
 
 		<nav id="global-header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	<!-- 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 			      <span class="sr-only">Toggle navigation</span>
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
-			    </button>
-				<a class="navbar-brand" href="#">Brand</a>
+			    </button> -->
+				<a class="navbar-brand" href="#">Knctr</a>
+				<a class="navbar-brand" href="#">Where you get answers from people you trust</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
-			    <ul class="nav navbar-nav">
+<!-- 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="#">Link</a></li>
 			      <li><a href="#">Link</a></li>
 			      <li class="dropdown">
@@ -29,14 +30,14 @@
 			          <li><a href="#">One more separated link</a></li>
 			        </ul>
 			      </li>
-			    </ul>
-			    <form class="navbar-form navbar-left" role="search">
+			    </ul> -->
+<!-- 			    <form class="navbar-form navbar-left" role="search">
 			      <div class="form-group">
 			        <input type="text" class="form-control" placeholder="Search">
 			      </div>
 			      <button type="submit" class="btn btn-default">Submit</button>
-			    </form>
-			    <ul class="nav navbar-nav navbar-right">
+			    </form> -->
+<!-- 			    <ul class="nav navbar-nav navbar-right">
 			      <li><a href="#">Link</a></li>
 			      <li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -47,47 +48,155 @@
 			          <li><a href="#">Separated link</a></li>
 			        </ul>
 			      </li>
-			    </ul>
+			    </ul> -->
 			  </div><!-- /.navbar-collapse -->
 		</nav>
 
 
 		<div id="content">
 			<div id="questionstream">
-				<div class="feed-item">
-					<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
-					<div class="feed-body">
-						<div class="annotated-body">
-							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+
+				<div id="sectionbuttons" class="btn-group btn-group-justified">
+  					<a class="btn btn-primary active" onclick="selecttab(0);">Your network's questions</a>
+  					<a class="btn btn-default" onclick="selecttab(1);">Your questions</a>
+  					<a class="btn btn-default" onclick="selecttab(2);">Questions you've helped</a>
+				</div>
+
+
+				<div class="userfeed">
+					hey
+				</div>
+				<div class="userfeed" hidden="true">
+					works
+				</div>
+			
+				<div class="userfeed" hidden="true">
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body" onclick="expandquestion(this);">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-description" hidden="true">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+							</div>
+							<div class="question-category">Question Category: 
+							</div>
+							
 						</div>
-						<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
-						<div class="question-category">Question Category: 
+						<div class="question-actions">
+							<div class="btn-group-vertical">
+							  <button type="button" class="btn btn-default" onclick="actionbuttons_state(this, 0);"><span class="glyphicon glyphicon-comment"></span></button>
+							  <button type="button" class="btn btn-default" onclick="actionbuttons_state(this, 1);"><span class="glyphicon glyphicon-random"></span></button>
+							  <button type="button" class="btn btn-default" onclick="actionbuttons_state(this, 2);"><span class="glyphicon glyphicon-remove-circle"></span></button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="feed-item">
-					<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
-					<div class="feed-body">
-						<div class="annotated-body">
-							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
-						</div>
-						<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
-						<div class="question-category">Question Category: 
+
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="feed-item">
-					<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
-					<div class="feed-body">
-						<div class="annotated-body">
-							<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body" onclick="expandquestion(this);">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-description" hidden="true">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+							</div>
+							<div class="question-category">Question Category: 
+							</div>
+							
 						</div>
-						<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
-						<div class="question-category">Question Category: 
+						<div class="question-actions">
+							<div class="btn-group-vertical">
+							  <button type="button" class="btn btn-default" onclick="actionbuttons_state(this, 0);"><span class="glyphicon glyphicon-comment"></span></button>
+							  <button type="button" class="btn btn-default" onclick="actionbuttons_state(this, 1);"><span class="glyphicon glyphicon-random"></span></button>
+							  <button type="button" class="btn btn-default" onclick="actionbuttons_state(this, 2);"><span class="glyphicon glyphicon-remove-circle"></span></button>
+							</div>
+						</div>
+					</div>
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
+						</div>
+					</div>
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
+						</div>
+					</div>
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
+						</div>
+					</div>
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
+						</div>
+					</div>
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
+						</div>
+					</div>
+					<div class="feed-item">
+						<img class="feed-photo" src="/assets/Headshot_Adam.jpg"></img>
+						<div class="feed-body">
+							<div class="annotated-body">
+								<span class="person-name"><strong>Adam Ferris</strong></span>, <span class="person-title">MBA Candidate</span>, <span class="question-intro">needs your help:</span>
+							</div>
+							<div class="question-content">What procedures/policies does Disney use to ensure their research is commercialized?</div>
+							<div class="question-category">Question Category: 
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+
+
 
 			<div id="questionentry">
 				<div id="question-header">Have a question? </div>
@@ -100,12 +209,82 @@
 					<button id="question-submit" type="button" class="btn btn-primary btn-block">Submit</button>
 				</div>
 			</div>
+
+
+			<div class="action-section" hidden="true">
+				hey
+			</div>
+
+
 		</div>
 
 
 
 	</body>
 </html>
+
+
+<script>
+	// $(".feed-body").hover(
+	// 	function(){
+	// 		$(this).addClass("well");
+	// 	}, function(){
+	// 		$(this).removeClass("well");
+	// 	}
+	// );
+
+	function selecttab(tabnumber){
+		$(".userfeed").hide();
+		$("#sectionbuttons").find(".active").removeClass("active").removeClass("btn-primary").addClass("btn-default");
+		$("#sectionbuttons").children().eq(tabnumber).removeClass("btn-default").addClass("btn-primary").addClass("active");
+		$(".userfeed").eq(tabnumber).show();
+	}
+
+	function expandquestion(element){
+		if ($(element).find(".question-description").is(":hidden")){
+			$(element).parent().css("height", "500").find(".question-description").show();
+		} else{
+			$(element).parent().css("height", "117").find(".question-description").hide();
+		}
+		
+	}
+
+	// numbers range 0, 1, 2. 0 for "Answer", 1 for "Connect", and 2 for "Ignore"
+	function actionbuttons_state(element, number){
+		if(number == 0){
+			$("#questionentry").hide();
+			if(!$(element).hasClass("active")){
+				$(element).parent().children().removeClass("active");
+				$(element).addClass("active");
+				$(".action-section").show();
+			} else{
+				$(element).removeClass("active");
+				$(".action-section").hide();
+				$("#questionentry").show();
+			}
+		} 
+		else if(number == 1){
+			$("#questionentry").hide();
+			if(!$(element).hasClass("active")){
+				$(element).parent().children().removeClass("active");
+				$(element).addClass("active");
+				$(".action-section").show();
+			} else{
+				$(element).removeClass("active");
+				$(".action-section").hide();
+				$("#questionentry").show();
+			}
+		} 
+		else if(number == 2){
+			$(".feed-item").has(element).remove();
+			$(".action-section").hide();
+			$("#questionentry").show();
+		}
+
+	}
+
+</script>
+
 	
 <style>
 
@@ -150,6 +329,9 @@ body{
 }
 
 .feed-body{
+	width: 480px;
+	float: left;
+	cursor: pointer;
 	
 }
 
@@ -174,8 +356,17 @@ body{
 
 }
 
+.question-description{
+
+}
+
 .question-category{
 	padding-top: 5px;
+}
+
+.question-actions{
+	float: right;
+
 }
 
 
@@ -197,9 +388,18 @@ body{
 	text-align: center;
 }
 
+.action-section{
+	width: 318px;
+	float: right;
+	margin-left: 10px;
+	border: 1px #D4D4D4 solid;
+	background: #FFFFFF;
+	height: 200px;
+}
+
 /*.question-element-holder{
 	margin:5px;
-}*/
+}
 
 #input-question{
 	margin-top:5px;
