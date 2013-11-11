@@ -211,8 +211,22 @@
 			</div>
 
 
-			<div class="action-section" hidden="true">
-				hey
+			<div id="answer-section" class="action-section" hidden="true">
+				<div id="question-header">Can you answer your colleague's question?</div>
+				<div class="answer-button">
+					<div>Email body:</div>
+					<textarea id="input-description" class="form-control" style="margin-top: 5px; margin-bottom: 5px; max-rows:'4';" rows="4" placeholder="Hey! I can help. When do you want to talk?"></textarea>
+					<button type="button" class="btn btn-primary btn-block">Send email</button> 
+				</div>
+			</div>
+
+			<div id="connect-section" class="action-section" hidden="true">
+				<div id="question-header">Do you know a person who's closer to the answer?</div>
+				<div class="answer-button">
+					<div>Push question to someone in your network:</div>
+					<textarea id="input-description" class="form-control" style="margin-top: 5px; margin-bottom: 5px;" placeholder="Example: John Harvard"></textarea>
+					<button type="button" class="btn btn-primary btn-block">Send</button> 
+				</div>
 			</div>
 
 
@@ -253,31 +267,38 @@
 	function actionbuttons_state(element, number){
 		if(number == 0){
 			$("#questionentry").hide();
+			$("#answer-section").hide();
+			$("#connect-section").hide();
 			if(!$(element).hasClass("active")){
 				$(element).parent().children().removeClass("active");
 				$(element).addClass("active");
-				$(".action-section").show();
+				$("#answer-section").show();
 			} else{
 				$(element).removeClass("active");
-				$(".action-section").hide();
+				$("#answer-section").hide();
+				$("#connect-section").hide();
 				$("#questionentry").show();
 			}
 		} 
 		else if(number == 1){
 			$("#questionentry").hide();
+			$("#answer-section").hide();
+			$("#connect-section").hide();
 			if(!$(element).hasClass("active")){
 				$(element).parent().children().removeClass("active");
 				$(element).addClass("active");
-				$(".action-section").show();
+				$("#connect-section").show();
 			} else{
 				$(element).removeClass("active");
-				$(".action-section").hide();
+				$("#answer-section").hide();
+				$("#connect-section").hide();
 				$("#questionentry").show();
 			}
 		} 
 		else if(number == 2){
 			$(".feed-item").has(element).remove();
-			$(".action-section").hide();
+			$("#answer-section").hide();
+			$("#connect-section").hide();
 			$("#questionentry").show();
 		}
 
@@ -394,7 +415,12 @@ body{
 	margin-left: 10px;
 	border: 1px #D4D4D4 solid;
 	background: #FFFFFF;
-	height: 200px;
+	height: 250px;
+}
+
+.answer-button{
+	margin: 5px;
+	margin-top: 15px;
 }
 
 /*.question-element-holder{
